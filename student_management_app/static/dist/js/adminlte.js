@@ -325,7 +325,7 @@
       CONTROL_SIDEBAR_OPEN: 'control-sidebar-open'
     };
     var Default = {
-      scrollbarTheme: 'os-theme-light',
+      scrollbarTheme: 'os-theme-dark',
       scrollbarAutoHide: 'l'
     };
     /**
