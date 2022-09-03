@@ -11,7 +11,7 @@ Edit Platform |  Course ID : {{ course.id }}
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Edit Course</h3>
+                <h3 class="card-title">Edit Platform</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,7 +19,7 @@ Edit Platform |  Course ID : {{ course.id }}
                   {% csrf_token %}
                 <div class="card-body">
                   <div class="form-group">
-                    <label>Course Name </label>
+                    <label>Platform Name </label>
                     <input type="text" class="form-control" name="course" placeholder="Enter Course" value="{{ course.course_name }}">
                     <input type="hidden"  name="course_id"  value="{{ course.id }}">
                   </div>
@@ -40,7 +40,7 @@ Edit Platform |  Course ID : {{ course.id }}
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Save Course</button>
+                  <button type="submit" class="btn btn-primary btn-block">Save Platform</button>
                 </div>
               </form>
             </div>
