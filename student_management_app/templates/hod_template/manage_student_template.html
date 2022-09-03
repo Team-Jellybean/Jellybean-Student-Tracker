@@ -1,6 +1,6 @@
 {% extends 'hod_template/base_template.html' %}
 {% block page_title %}
-Manage Student
+Manage Mentee
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -12,7 +12,7 @@ Manage Student
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Student Details</h3>
+                <h3 class="card-title">Mentee Details</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -37,8 +37,7 @@ Manage Student
                       <th>Address</th>
                       <th>Gender</th>
                       <th>Profile Pic</th>
-                      <th>Session Year</th>
-                      <th>Course</th>
+                      <th>Platforms</th>
                       <th>Last Login</th>
                       <th>Date Joined</th>
                       <th>Action</th>
@@ -55,7 +54,6 @@ Manage Student
                       <td>{{ student.address }}</td>
                       <td>{{ student.gender }}</td>
                       <td><img src="{{ student.profile_pic }}" style="width:100px"/></td>
-                      <td>{{ student.session_year_id.session_start_year }} TO {{ student.session_year_id.session_end_year }}</td>
                       <td>{{ student.course_id.course_name }}</td>
                       <td>{{ student.admin.last_login }}</td>
                       <td>{{ student.admin.date_joined }}</td>

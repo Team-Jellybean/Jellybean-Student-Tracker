@@ -1,6 +1,6 @@
 {% extends 'hod_template/base_template.html' %}
 {% block page_title %}
-Staff Feedback
+Mentor Feedback
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Staff Feedback
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Staff Feedback</h3>
+                <h3 class="card-title">Mentor Feedback</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,10 +19,10 @@ Staff Feedback
                     <table class="table">
                         <tr>
                             <th>ID</th>
-                            <th>Staff ID</th>
-                            <th>Staff Name</th>
+                            <th>Mentor ID</th>
+                            <th>Mentor Name</th>
                             <th>Message</th>
-                            <th>Sended On</th>
+                            <th>Sent On</th>
                             <th>Reply</th>
                         </tr>
                         {% for feedback in feedbacks %}

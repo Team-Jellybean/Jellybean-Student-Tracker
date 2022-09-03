@@ -9,14 +9,14 @@ body {
     padding: 0;
     font-size: 14px;
     font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
-    color: #333;
-    background: #fff;
+    color: black;
+    background: black;
 }
 
 /* LINKS */
 
 a:link, a:visited {
-    color: #447e9b;
+    color: black;
     text-decoration: none;
 }
 
@@ -60,7 +60,7 @@ h1 {
     margin: 0 0 20px;
     font-weight: 300;
     font-size: 20px;
-    color: #666;
+    color: white;
 }
 
 h2 {

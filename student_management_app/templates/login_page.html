@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Student Management System | Log in</title>
+  <title>Jellybean Student Tracker| Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,12 +22,12 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <b>Student Management System</b>
+    <b>Jellybean Student Tracker</b>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to Student Management System</p>
+      <p class="login-box-msg">Sign in to Jellybean Student Tracker</p>
 
       <form action="/doLogin" method="post" id="demo-form">
       {% csrf_token %}
@@ -62,10 +62,10 @@
              <a href="{% url 'signup_admin' %}">Admin Signup</a>
           </div><!-- /.col -->
                         <div class="col-12 text-center">
-             <a href="{% url 'signup_staff' %}">Staff Signup</a>
+             <a href="{% url 'signup_staff' %}">Mentor Signup</a>
           </div><!-- /.col -->
                                     <div class="col-12 text-center">
-             <a href="{% url 'signup_student' %}">Student Signup</a>
+             <a href="{% url 'signup_student' %}">Mentee Signup</a>
           </div><!-- /.col -->
         </div>
         <div class="row">

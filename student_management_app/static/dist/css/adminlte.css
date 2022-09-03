@@ -32,7 +32,7 @@
   --warning: #ffc107;
   --danger: #dc3545;
   --light: #f8f9fa;
-  --dark: #343a40;
+  --dark: black;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -52,7 +52,7 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(5,4,4);
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -65,9 +65,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #343a40;
   text-align: left;
-  background-color: #ffffff;
+  background-color: #343a40;
 }
 
 [tabindex="-1"]:focus {
@@ -160,9 +160,9 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #343a40;
   text-decoration: none;
-  background-color: transparent;
+  background-color: black;
 }
 
 a:hover {
@@ -219,7 +219,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #6c757d;
+  color: black;
   text-align: left;
   caption-side: bottom;
 }
@@ -444,7 +444,7 @@ small,
 mark,
 .mark {
   padding: 0.2em;
-  background-color: #fcf8e3;
+  background-color: black;
 }
 
 .list-unstyled {
@@ -492,7 +492,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #ffffff;
+  background-color: black;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
@@ -516,7 +516,7 @@ mark,
 
 code {
   font-size: 87.5%;
-  color: #e83e8c;
+  color: black;
   word-break: break-word;
 }
 
@@ -527,7 +527,7 @@ a > code {
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 87.5%;
-  color: #ffffff;
+  color: black;
   background-color: #212529;
   border-radius: 0.2rem;
   box-shadow: inset 0 -0.1rem 0 rgba(0, 0, 0, 0.25);
@@ -543,7 +543,7 @@ kbd kbd {
 pre {
   display: block;
   font-size: 87.5%;
-  color: #212529;
+  color: black;
 }
 
 pre code {
@@ -4556,35 +4556,35 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-  color: #ffffff;
+  color: black;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
-  color: #ffffff;
+  color: black;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.75);
+  color: black
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: white;
+  color: black;
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
-  color: rgba(255, 255, 255, 0.25);
+  color: black;
 }
 
 .navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #ffffff;
+  color: black;
 }
 
 .navbar-dark .navbar-toggler {
-  color: rgba(255, 255, 255, 0.75);
-  border-color: rgba(255, 255, 255, 0.1);
+  color: black;
+  border-color: black;
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -4592,15 +4592,15 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-text {
-  color: rgba(255, 255, 255, 0.75);
+  color: black;
 }
 
 .navbar-dark .navbar-text a {
-  color: #ffffff;
+  color:black;
 }
 
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
-  color: #ffffff;
+  color: black;
 }
 
 .card {
@@ -4611,7 +4611,7 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #ffffff;
+  background-color: black;
   background-clip: border-box;
   border: 0 solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -11465,39 +11465,39 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
 
 .navbar-dark .form-control-navbar,
 .navbar-dark .btn-navbar {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: black;
   border: 0;
 }
 
 .navbar-dark .form-control-navbar::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: black;
 }
 
 .navbar-dark .form-control-navbar::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: black;
 }
 
 .navbar-dark .form-control-navbar:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: black;
 }
 
 .navbar-dark .form-control-navbar::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: black;
 }
 
 .navbar-dark .form-control-navbar::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: black;
 }
 
 .navbar-dark .form-control-navbar + .input-group-append > .btn-navbar {
-  color: rgba(255, 255, 255, 0.6);
+  color: black;
 }
 
 .navbar-dark .form-control-navbar:focus,
 .navbar-dark .form-control-navbar:focus + .input-group-append .btn-navbar {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: black;
   border: 0 !important;
-  color: #343a40;
+  color: black;
 }
 
 .navbar-light .form-control-navbar,
@@ -13457,7 +13457,7 @@ body.text-sm .control-sidebar {
 }
 
 .navbar-dark {
-  background-color: #343a40;
+  background-color: black;
 }
 
 .navbar-primary {
@@ -13557,7 +13557,7 @@ body.text-sm .control-sidebar {
 }
 
 .navbar-gray-dark {
-  background-color: #343a40;
+  background-color: black;
 }
 
 .form-group.has-icon {
@@ -29966,12 +29966,12 @@ a.text-muted:hover {
 }
 
 .accent-gray-dark [class*="sidebar-light-"] .nav-sidebar .nav-treeview > .nav-item > .nav-link:not(.active):hover, .accent-gray-dark[class*="sidebar-dark-"] .nav-sidebar .nav-treeview > .nav-item > .nav-link:not(.active):hover {
-  color: #343a40;
+  color: black;
 }
 
 .accent-gray-dark .page-item.active .page-link {
-  background-color: #343a40;
-  border-color: #343a40;
+  background-color: black;
+  border-color: black;
 }
 
 .accent-gray-dark .page-item.disabled .page-link {
