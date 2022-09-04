@@ -89,7 +89,7 @@ Home
               <div class="col-lg-6">
                    <div class="card card-success">
                   <div class="card-header">
-                    <h3 class="card-title">Total Subject in Each Courses</h3>
+                    <h3 class="card-title">Total Subjects in Each Platform</h3>
 
                     <div class="card-tools">
                       <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -108,7 +108,7 @@ Home
               <div class="col-lg-6">
                  <div class="card card-info">
                   <div class="card-header">
-                    <h3 class="card-title">Total Student in Each Platform</h3>
+                    <h3 class="card-title">Total Students in Each Platform</h3>
 
                     <div class="card-tools">
                       <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -125,7 +125,7 @@ Home
               <div class="col-lg-6">
                  <div class="card card-warning">
                   <div class="card-header">
-                    <h3 class="card-title">Total Student in Each Subject</h3>
+                    <h3 class="card-title">Total Students in Each Subject</h3>
 
                     <div class="card-tools">
                       <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -144,7 +144,7 @@ Home
               <div class="col-lg-12">
                   <div class="card card-success">
                   <div class="card-header">
-                    <h3 class="card-title">Staff Leaves vs Attendance</h3>
+                    <h3 class="card-title">Mentor Results vs Time</h3>
 
                     <div class="card-tools">
                       <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -165,7 +165,7 @@ Home
               <div class="col-lg-12">
                   <div class="card card-success">
                   <div class="card-header">
-                    <h3 class="card-title">Student Leaves vs Attendance</h3>
+                    <h3 class="card-title">Mentee Scores vs Accuracy</h3>
 
                     <div class="card-tools">
                       <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -192,8 +192,8 @@ Home
 
             var pieData        = {
                   labels: [
-                      'Students',
-                      'Staffs'
+                      'Mentees',
+                      'Mentors'
                   ],
                   datasets: [
                     {
@@ -299,7 +299,7 @@ Home
                           labels  : staff_name_list,
                           datasets: [
                             {
-                              label               : 'Leaves',
+                              label               : 'Results',
                               backgroundColor     : 'rgba(60,141,188,0.9)',
                               borderColor         : 'rgba(60,141,188,0.8)',
                               pointRadius          : false,
@@ -310,7 +310,7 @@ Home
                               data                : attendance_absent_list_staff
                             },
                             {
-                              label               : 'Attendance',
+                              label               : 'Time',
                               backgroundColor     : 'rgba(210, 214, 222, 1)',
                               borderColor         : 'rgba(210, 214, 222, 1)',
                               pointRadius         : false,
@@ -348,7 +348,7 @@ Home
                           labels  : student_name_list,
                           datasets: [
                             {
-                              label               : 'Leaves',
+                              label               : 'Scores',
                               backgroundColor     : 'rgba(60,141,188,0.9)',
                               borderColor         : 'rgba(60,141,188,0.8)',
                               pointRadius          : false,
@@ -359,7 +359,7 @@ Home
                               data                : attendance_absent_list_student
                             },
                             {
-                              label               : 'Attendance',
+                              label               : 'Accuracy',
                               backgroundColor     : 'rgba(210, 214, 222, 1)',
                               borderColor         : 'rgba(210, 214, 222, 1)',
                               pointRadius         : false,
