@@ -1,79 +1,105 @@
 {% extends 'student_template/base_template.html' %}
-{% block custom_css %}
-<style>
-.col-lg-3.attendance_div_red {
-    padding: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: #f44336;
-    border: 10px solid white;
-    text-align: center;
-    color: #fff;
-    border-radius: 30px;
-    box-shadow: 1px 1px 1px grey;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.col-lg-3.attendance_div_green {
-    padding: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: #388e3c;
-    border: 10px solid white;
-    text-align: center;
-    color: #fff;
-    border-radius: 30px;
-    box-shadow: 1px 1px 1px grey;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-</style>
-{% endblock custom_css %}
 {% block page_title %}
-Attendance Data
+Leaderboard
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-                    <div class="row">
-              <div class="col-md-12">
-            <!-- general form elements -->
-            <div class="card card-primary">
+
+
+           <div class="row">
+          <div class="col-12">
+            <div class="card">
               <div class="card-header">
-                <h3 class="card-title">View Attendance</h3>
+                <h3 class="card-title">Leaderboard Details</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
               </div>
               <!-- /.card-header -->
-              <!-- form start -->
-                <div class="card-body">
-                    <div class="row">
-                    {% if attendance_reports %}
-                    {% for attendance_report in attendance_reports %}
-                       {% if attendance_report.status == True %}
-                        <div class="col-lg-3 attendance_div_green">
-                            <b>Date : {{ attendance_report.attendance_id.attendance_date }}</b>
-                            <br>
-                            <b>[ Status : Present ]</b>
-                        </div>
-                        {% else %}
-                        <div class="col-lg-3 attendance_div_red">
-                            <b>Date : {{ attendance_report.attendance_id.attendance_date }}</b>
-                            <br>
-                            <b>[ Status : Absent ]</b>
-                        </div>
-                        {% endif %}
-                    {% endfor %}
-                    {% else %}
-                        <div class="alert alert-danger text-center">No Attendance Data Found!</div>
-                     {% endif %}
-                    </div>
-                </div>
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Name</th>
+                      <th>Rank</th>
+                    </tr>
+                    <tr>
+                      <td>varunvashisht</td>
+                      <td>Varun Vashisht</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>valerashirberg</td>
+                      <td>Valera Shirberg</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>lelahsprage</td>
+                      <td>Sprage Lelah</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>minnefaria09</td>
+                      <td>Faria Minne</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>Norvol23</td>
+                      <td>Norvol Lucille</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>LianaEarlie</td>
+                      <td>Liana Earlie</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>Deane97</td>
+                      <td>Deane Toni</td>
+                      <td>7</td>
+                    </tr>
+                    <tr>
+                      <td>PhilippGeorgetta</td>
+                      <td>Georgetta Philipp</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>Layla.Liebermann</td>
+                      <td>Layla Liebermann</td>
+                      <td>9</td>
+                    </tr>
+                    <tr>
+                      <td>sabina.bow</td>
+                      <td>Sabina Bow</td>
+                      <td>10</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for course in courses %}
+                    <tr>
+                      <td>{{ course.id }}</td>
+                      <td>{{ course.course_name }}</td>
+                      <td><a href="/edit_course/{{ course.id }}" class="btn btn-success">Edit</a></td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
             <!-- /.card -->
-
-
-
           </div>
-          </div>
+        </div>
       </div>
     </section>
     <!-- /.content -->

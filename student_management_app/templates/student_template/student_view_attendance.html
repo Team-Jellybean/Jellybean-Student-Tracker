@@ -1,75 +1,105 @@
 {% extends 'student_template/base_template.html' %}
 {% block page_title %}
-View Attendance Data
+Leaderboard
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-                    <div class="row">
-              <div class="col-md-12">
-            <!-- general form elements -->
-            <div class="card card-primary">
+
+
+           <div class="row">
+          <div class="col-12">
+            <div class="card">
               <div class="card-header">
-                <h3 class="card-title">View Attendance</h3>
+                <h3 class="card-title">Leaderboard Details</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
               </div>
               <!-- /.card-header -->
-              <!-- form start -->
-             <form action="{% url 'student_view_attendance_post' %}" method="post">
-                <div class="card-body">
-                    {% csrf_token %}
-                   <div class="form-group">
-                    <label>Subject </label>
-                    <select class="form-control" name="subject" id="subject">
-                        {% for subject in subjects %}
-                          <option value="{{ subject.id }}">{{ subject.subject_name }}</option>
-                        {% endfor %}
-                    </select>
-                  </div>
-                  <div class="row">
-                  <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>Start Date</label>
-                    <input type="date" name="start_date" class="form-control" placeholder="Start Date">
-                  </div>
-                  </div>
-                  <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>End Date</label>
-                    <input type="date" name="end_date" class="form-control" placeholder="End Date">
-                  </div>
-                  </div>
-                  </div>
-                   <div class="form-group">
-                      {% if messages %}
-                        {% for message in messages %}
-                        {% if message.tags == 'error' %}
-                        <div class="alert alert-danger" style="margin-top:10px">{{ message }}</div>
-                        {% endif %}
-                        {% if message.tags == 'success' %}
-                        <div class="alert alert-success" style="margin-top:10px">{{ message }}</div>
-                        {% endif %}
-                        {% endfor %}
-                      {% endif %}
-                    </div>
-
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block" id="fetch_student">Fetch Attendance</button>
-                </div>
-
-                <div id="student_data" class="card-footer">
-
-                </div>
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Name</th>
+                      <th>Rank</th>
+                    </tr>
+                    <tr>
+                      <td>varunvashisht</td>
+                      <td>Varun Vashisht</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>valerashirberg</td>
+                      <td>Valera Shirberg</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>lelahsprage</td>
+                      <td>Sprage Lelah</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>minnefaria09</td>
+                      <td>Faria Minne</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>Norvol23</td>
+                      <td>Norvol Lucille</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>LianaEarlie</td>
+                      <td>Liana Earlie</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>Deane97</td>
+                      <td>Deane Toni</td>
+                      <td>7</td>
+                    </tr>
+                    <tr>
+                      <td>PhilippGeorgetta</td>
+                      <td>Georgetta Philipp</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>Layla.Liebermann</td>
+                      <td>Layla Liebermann</td>
+                      <td>9</td>
+                    </tr>
+                    <tr>
+                      <td>sabina.bow</td>
+                      <td>Sabina Bow</td>
+                      <td>10</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for course in courses %}
+                    <tr>
+                      <td>{{ course.id }}</td>
+                      <td>{{ course.course_name }}</td>
+                      <td><a href="/edit_course/{{ course.id }}" class="btn btn-success">Edit</a></td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
             </div>
-             </form>
             <!-- /.card -->
-
-
-
           </div>
-          </div>
+        </div>
       </div>
     </section>
     <!-- /.content -->

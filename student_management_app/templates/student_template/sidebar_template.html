@@ -52,6 +52,15 @@
               </p>
             </a>
           </li> -->
+          <li class="nav-item">
+            {% url 'student_view_attendance' as student_view_attendance %}
+            <a href="{{ student_view_attendance }}" class="nav-link {% if request.path == student_view_attendance %} active {% endif %}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Leaderboard
+              </p>
+            </a>
+          </li>
            <li class="nav-item">
             {% url 'student_feedback' as student_feedback %}
             <a href="{{ student_feedback }}" class="nav-link {% if request.path == student_feedback %} active {% endif %}">
