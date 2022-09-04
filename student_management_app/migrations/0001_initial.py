@@ -63,17 +63,17 @@ class Migration(migrations.Migration):
                 ('updated_at', models.DateTimeField(auto_now_add=True)),
             ],
         ),
-        # migrations.CreateModel(
-        #     name='SessionYearModel',
-        #     fields=[
-        #         ('id', models.AutoField(primary_key=True, serialize=False)),
-        #         ('session_start_year', models.DateField()),
-        #         ('session_end_year', models.DateField()),
-        #     ],
-        #     managers=[
-        #         ('object', django.db.models.manager.Manager())
-        #     ],
-        # ),
+        migrations.CreateModel(
+            name='SessionYearModel',
+            fields=[
+                ('id', models.AutoField(primary_key=True, serialize=False)),
+                ('session_start_year', models.DateField()),
+                ('session_end_year', models.DateField()),
+            ],
+            managers=[
+                ('object', django.db.models.manager.Manager()),
+            ],
+        ),
         migrations.CreateModel(
             name='Subjects',
             fields=[
@@ -97,7 +97,7 @@ class Migration(migrations.Migration):
                 ('fcm_token', models.TextField(default='')),
                 ('admin', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
                 ('course_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='student_management_app.Courses')),
-                #('session_year_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='student_management_app.SessionYearModel')),
+                ('session_year_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='student_management_app.SessionYearModel')),
             ],
         ),
         migrations.CreateModel(
@@ -200,11 +200,11 @@ class Migration(migrations.Migration):
                 ('student_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='student_management_app.Students')),
             ],
         ),
-        # migrations.AddField(
-        #     model_name='attendance',
-        #     #name='session_year_id',
-        #     #field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='student_management_app.SessionYearModel'),
-        # ),
+        migrations.AddField(
+            model_name='attendance',
+            name='session_year_id',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='student_management_app.SessionYearModel'),
+        ),
         migrations.AddField(
             model_name='attendance',
             name='subject_id',

@@ -25,7 +25,7 @@
             border-left: 1px solid rgb(229, 229, 229);
         }
         textarea::-webkit-scrollbar-thumb {
-            background-color: black;
+            background-color: rgba(0, 0, 0, .2);
             background-clip: padding-box;
             min-height: 28px;
             padding: 100px 0 0;
@@ -42,7 +42,7 @@
             border-width: 0 0 0 4px;
         }
         textarea::-webkit-scrollbar-corner {
-            background: black;
+            background: transparent;
         }
         ::selection,
         ::-moz-selection {
@@ -70,11 +70,11 @@
         }
         html,
         body {
-            background-color:black;
+            background-color: #FBFBFB;
             font-size: 13px;
             height: 100%;
             cursor: default;
-            color: black;
+            color: Gray;
             overflow: hidden;
         }
         /* header */
@@ -83,13 +83,13 @@
         .line-width-done,
         .colors-done,
         .additional-close {
-            background: -moz-linear-gradient(top, rgba(5, 4, 4) 0%, rgba(5, 4, 4) 97%, rgba(5, 4, 4) 97%, rgba(5, 4, 4) 100%);
+            background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(243, 243, 243, 1) 97%, rgba(237, 237, 237, 1) 97%, rgba(255, 255, 255, 1) 100%);
             /* FF3.6+ */
 
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(5, 4, 4)), color-stop(97%, rgba(5, 4, 4)), color-stop(97%, rgba(5, 4, 4)), color-stop(100%, rgba(5, 4, 4)));
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(97%, rgba(243, 243, 243, 1)), color-stop(97%, rgba(237, 237, 237, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
             /* Chrome,Safari4+ */
 
-            background: -webkit-linear-gradient(top, rgba(5, 4, 4) 0%, rgba(243, 243, 243, 1) 97%, rgba(237, 237, 237, 1) 97%, rgba(255, 255, 255, 1) 100%);
+            background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(243, 243, 243, 1) 97%, rgba(237, 237, 237, 1) 97%, rgba(255, 255, 255, 1) 100%);
             /* Chrome10+,Safari5.1+ */
 
             background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(243, 243, 243, 1) 97%, rgba(237, 237, 237, 1) 97%, rgba(255, 255, 255, 1) 100%);

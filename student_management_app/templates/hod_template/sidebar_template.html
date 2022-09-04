@@ -119,6 +119,15 @@
               </p>
             </a>
           </li> -->
+          <li class="nav-item">
+            {% url 'manage_session' as manage_session %}
+            <a href="{% url 'manage_session' %}" class="nav-link {% if request.path == manage_session %} active {% endif %} ">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p>
+                Manage Session Year
+              </p>
+            </a>
+          </li>
 
            <li class="nav-item">
              {% url 'student_feedback_message' as student_feedback_message %}

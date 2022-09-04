@@ -26,13 +26,13 @@ Add Results
                         {% endfor %}
                     </select>
                   </div>
-                  <!-- <div class="form-group">
+                  <div class="form-group">
                     <label>Session Year</label>
                     <select class="form-control" name="session_year" id="session_year">
                         {% for session_year in session_years %}
                           <option value="{{ session_year.id }}">{{ session_year.session_start_year }} TO {{ session_year.session_end_year }}</option>
                         {% endfor %}
-                    </select> -->
+                    </select>
                   </div>
                    <div class="form-group">
                       {% if messages %}
@@ -74,7 +74,7 @@ Add Results
     $(document).ready(function(){
         $("#fetch_student").click(function(){
             var subject=$("#subject").val()
-            // var session_year=$("#session_year").val()
+            var session_year=$("#session_year").val()
 
             $.ajax({
                 url:'{% url 'get_students' %}',

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Jellybean Student Tracker | Signup Mentee</title>
+  <title>Jellybean Student Tracker| Signup Mentee</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,12 +22,12 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Jellybean</b> Student Tracker</a>
+    <a href="../../index2.html"><b>Jellybean</b> Jellybean Student Tracker</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Mentor Signup for Jellybean Student Tracker</p>
+      <p class="login-box-msg">Signup for Student in Jellybean Student Tracker</p>
 
       <form action="/do_signup_student" method="post" id="demo-form" enctype="multipart/form-data">
       {% csrf_token %}
@@ -114,11 +114,25 @@
           </div>
         </div>
 
+                    <div class="input-group mb-3">
+                          <select class="form-control" name="session_year">
+                        {% for sessionyear in session_years %}
+                          <option value="{{ sessionyear.id }}">{{ sessionyear.session_start_year }} - {{ sessionyear.session_end_year }}</option>
+                        {% endfor %}
+                    </select>
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+
 
         <div class="row">
           <!-- /.col -->
           <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-block" >Sign Up Mentee</button>
+            <button type="submit" class="btn btn-primary btn-block" >Sign Up Student</button>
           </div><!-- /.col -->
 
         </div>
