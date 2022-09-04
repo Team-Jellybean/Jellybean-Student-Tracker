@@ -4,3 +4,6 @@ gunicorn==20.0.4
 psycopg2==2.8.5
 requests==2.23.0
 bs4==0.0.1
+selenium==1.26.9
+python-csv==0.0.13
+sockets==0.1.0
